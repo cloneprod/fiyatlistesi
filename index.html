@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Düğün Fotoğraf & Video Fiyatları 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0a09;
+      --card-bg: rgba(255,255,255,0.03);
+      --text: #e6cc9b;
+      --accent: #f7d88a;
+      --highlight: #fff5c1;
+      --border: #ffffff1a;
+      --font: 'Playfair Display', serif;
+      --glow: 0 0 8px rgba(255, 248, 215, 0.3);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font);
+      background: linear-gradient(135deg, #0b0a09 0%, #1a1610 100%);
+      color: var(--text);
+      padding-bottom: 60px;
+    }
+
+    header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background: transparent; /* Arka planı tamamen kaldırdık */
+  border-bottom: 1px solid var(--border);
+  animation: fadeIn 1.2s ease-out both;
+}
+
+.logo img {
+  width: auto;
+  vertical-align: middle;
+  display: block;
+  height: 50px;
+  border-radius: 50%; /* Logo daire kalsın */
+  box-shadow: none;   /* Görselin etrafında hiçbir kutu/çerçeve oluşmasın */
+  background: none;
+  border: none;
+}
+
+
+    .social {
+      display: flex;
+      gap: 12px;
+      font-size: 1.5rem;
+    }
+
+    .social a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .social a:hover {
+      transform: scale(1.2);
+      color: var(--highlight);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.8rem;
+      color: var(--highlight);
+      margin: 40px 0 30px;
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+    }
+
+    .section {
+      max-width: 1200px;
+      margin: 0 auto 60px;
+      padding: 0 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(6px);
+      position: relative;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 24px rgba(255, 255, 255, 0.08);
+      border-color: var(--accent);
+    }
+
+    .icon {
+      font-size: 2.7rem;
+      margin-bottom: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover .icon {
+      transform: scale(1.15);
+    }
+
+    .title {
+      font-size: 1.35rem;
+      font-weight: bold;
+      color: var(--highlight);
+      margin-bottom: 12px;
+    }
+
+    .content {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--accent);
+      border-top: 1px dashed var(--border);
+      padding-top: 10px;
+      text-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul li::before {
+      content: '✦ ';
+      color: var(--accent);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding-top: 30px;
+      color: var(--text);
+      border-top: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.02);
+      box-shadow: var(--glow);
+    }
+	/* Fade-in yukarıdan yumuşak geçiş */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade-in genel sınıfı */
+.fade-in {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.fade-in-1 { animation-delay: 0.2s; }
+.fade-in-2 { animation-delay: 0.4s; }
+.fade-in-3 { animation-delay: 0.6s; }
+.fade-in-4 { animation-delay: 0.8s; }
+.fade-in-5 { animation-delay: 1s; }
+
+/* Logo animasyonu: hafif büyüme ve şeffaflıktan ortaya çıkma */
+@keyframes logoFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  animation: logoFadeIn 1s ease-out forwards;
+  opacity: 0;
+}
+.logo span {
+  font-size: 1.4rem;
+  color: var(--highlight);
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLogo {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://cdn.resimupload.org/2025/06/10/clone-logo.png" alt="Clone Logo">
+      <span>Clone Productions</span>
+    </div>
+    <div class="social">
+      <a href="tel:05337619252" title="Telefon">📞</a>
+      <a href="https://instagram.com/studyoclone" target="_blank" title="Instagram">📷</a>
+    </div>
+  </header>
+
+  <main>
+    <h1>2025 Düğün Fotoğraf & Video Fiyatları</h1>
+    <section class="section">
+     <div class="grid">
+  <div class="card">
+    <div class="icon">📷</div>
+    <div class="title">Dış Çekim</div>
+    <div class="content">
+      <ul>
+        <li>İstenen mekânda çekim sağlanır</li>
+        <li>Tüm dijitaller teslim edilir</li>
+      </ul>
+    </div>
+    <div class="price">7.500 TL</div>
+  </div>
+
+  <div class="card">
+    <div class="icon">📚</div>
+    <div class="title">Dış Çekim Albüm Paketi - Ekonomik</div>
+    <div class="content">
+      <ul>
+        <li>30x50 set albüm</li>
+        <li>2 adet aile albümü (miniboy)</li>
+        <li>50x70 Kanvas</li>
+      </ul>
+    </div>
+    <div class="price">11.500 TL</div>
+  </div>
+
+  <div class="card">
+    <div class="icon">📚</div>
+    <div class="title">Dış Çekim Albüm Paketi</div>
+    <div class="content">
+      <ul>
+        <li>30x60 set albüm</li>
+        <li>2 adet cep albümü (miniboy)</li>
+        <li>50x70 Kanvas</li>
+      </ul>
+    </div>
+    <div class="price">12.500 TL</div>
+  </div>
+
+  <div class="card">
+    <div class="icon">📚</div>
+    <div class="title">Dış Çekim Albüm Paketi</div>
+    <div class="content">
+      <ul>
+        <li>30x70 set albüm</li>
+        <li>2 adet aile albümü (miniboy)</li>
+        <li>50x70 Kanvas</li>
+      </ul>
+    </div>
+    <div class="price">13.500 TL</div>
+  </div>
+
+  <div class="card">
+    <div class="icon">📚</div>
+    <div class="title">Dış Çekim Albüm Paketi</div>
+    <div class="content">
+      <ul>
+        <li>30x80 set albüm</li>
+        <li>2 adet aile albümü (miniboy)</li>
+        <li>75x100 Kanvas</li>
+      </ul>
+    </div>
+    <div class="price">15.000 TL</div>
+  </div>
+
+  <div class="card">
+    <div class="icon">🎬</div>
+    <div class="title">Kısa Klip</div>
+    <div class="content">
+      <ul>
+        <li>2 dakikalık dış çekim video klibi</li>
+      </ul>
+    </div>
+    <div class="price">6.000 TL</div>
+  </div>
+
+  <div class="card">
+    <div class="icon">🎞️</div>
+    <div class="title">Tam Klip</div>
+    <div class="content">
+      <ul>
+        <li>3-5 dakikalık sinematik kurgu</li>
+      </ul>
+    </div>
+    <div class="price">9.000 TL</div>
+  </div>
+
+  <div class="card">
+    <div class="icon">💍</div>
+    <div class="title">Nişan Fotoğraf & Video</div>
+    <div class="content">
+      <ul>
+        <li>Organizasyon alanında kayıt</li>
+        <li>Tüm süreç video kaydı</li>
+        <li>Dijital teslim</li>
+      </ul>
+    </div>
+    <div class="price">7.000 TL</div>
+  </div>
+
+  <div class="card">
+    <div class="icon">💍</div>
+    <div class="title">Nişan Fotoğraf & Klip</div>
+    <div class="content">
+      <ul>
+        <li>Organizasyon alanında kayıt</li>
+        <li>Parça parça video çekim</li>
+        <li>Kurgu ve renklendirme sonrası dijital teslim</li>
+      </ul>
+    </div>
+    <div class="price">7.000 TL</div>
+  </div>
+
+  <div class="card">
+    <div class="icon">💍</div>
+    <div class="title">Nişan + Klip + Dış Çekim</div>
+    <div class="content">
+      <ul>
+        <li>Organizasyon ve dış çekim</li>
+        <li>Parça parça video ve kurgu</li>
+        <li>Dijital teslim</li>
+      </ul>
+    </div>
+    <div class="price">11.000 TL</div>
+  </div>
+
+  <div class="card">
+    <div class="icon">👰</div>
+    <div class="title">Kına & Düğün Full Paket</div>
+    <div class="content">
+      <ul>
+        <li>Kına ve düğün günü çekimi</li>
+        <li>Profesyonel fotoğraf + video</li>
+      </ul>
+    </div>
+    <div class="price">16.000 TL</div>
+  </div>
+</div>
+
+      </div>
+    </section>
+	<section class="section">
+  <div class="card">
+    <div class="icon">🚗</div>
+    <div class="title">Ulaşım Bilgisi</div>
+    <div class="content">
+      <ul>
+        <li>Ulaşım müşteriye aittir.</li>
+        <li>İhtiyaç halinde araç mevcutsa yakıt karşılaması sağlanabilir.</li>
+        <li>Gelin alma hizmeti düğün çekimi bünyesindeyse ücretsizdir.</li>
+        <li>Aksi durumda 3000 TL ek ücretle fotoğraf + video hizmeti verilir.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="icon">💾</div>
+    <div class="title">Teslimat & İzleme</div>
+    <div class="content">
+      <ul>
+        <li>Çekim sonrasında 1-7 gün içinde tüm dijitaller teslim edilir.</li>
+        <li>Google Drive linkiyle dijital olarak paylaşılır (USB harici).</li>
+        <li>seçtiğiniz müziğe göre kurgu yapılır ve sizlere gönderilir.</li>
+        <li>Çekilen içerikler Youtube’a yüklenir gizli olarak, güvenlik nedeniyle sadece size özel bağlantı ile izlenebilir.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer>
+    © 2025 Clone Productions | Tüm Hakları Saklıdır
+  </footer>
+</body>
+</html>
